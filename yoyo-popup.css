@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.alert-popup-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.alert-popup-modal.show {
+    display: block;
+    opacity: 1;
+}
+
+.alert-popup-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 5px;
+    animation: fadeIn 0.25s;
+}
+
+.alert-popup-header {
+    padding: 10px;
+    text-align: center;
+}
+
+.alert-popup-footer {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.alert-popup-body {
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.alert-popup-text {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #423b33;
+}
+
+.alert-popup-subtext {
+    font-size: 1.2em;
+}
+
+.alert-popup-icon {
+    width: 7rem;
+    height: 7rem;
+    margin-bottom: 10px;
+    animation: iconBounce 1s ease;
+}
+
+.btn {
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    margin-right: 10px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes iconBounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.fadeOutAnimation {
+    animation: fadeOut 0.25s;
+}
+
+.shakeAnimation {
+    animation: shake 0.5s;
+}
