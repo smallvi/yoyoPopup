@@ -23,7 +23,8 @@ Include the following files in your project:
 2. Initialize the plugin in your JavaScript:
     
     ### Simple Alert
-    ```
+
+    ```javascript
     showYoyoPopup({
         text: 'Done',
         type: 'success',
@@ -31,13 +32,14 @@ Include the following files in your project:
     ```
     
     ### Advance Alert
-    ```
+
+    ```javascript
     showYoyoPopup({
         id: 'default',
         title: '',
         text: 'Are you sure you want to proceed?',
         subtext: 'This action cannot be undone.',
-        type: 'success',
+        type: 'danger',
         isStatic: true,
         hasConfirmation: true,
         yesLabel: 'Yes, proceed',
@@ -64,6 +66,10 @@ Include the following files in your project:
 - formId: Form ID to submit (if submitType == 'form'),
 - callFunctionName: Function Name to call (if submitType == 'call_function'),
 - timeOut: auto close modal (1000 = 1 sec),
+
+## Sample
+
+Refer index.html
 
 ## License
 
