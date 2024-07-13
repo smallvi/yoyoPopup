@@ -8,16 +8,16 @@ This plugin provides a customizable alert popup without any dependencies.
 
 Include the following files in your project:
 
-- `yoyo-popup.css`
-- `yoyo-popup.js`
+- `yoyo-popup.min.css`
+- `yoyo-popup.min.js`
 
 ## Usage
 
 1. Include `yoyo-popup.css` and `yoyo-popup.js` in your HTML file:
 
    ```html
-   <link rel="stylesheet" href="path/to/yoyo-popup.css">
-   <script src="path/to/yoyo-popup.js"></script>
+   <link rel="stylesheet" href="path/to/yoyo-popup.min.css">
+   <script src="path/to/yoyo-popup.min.js"></script>
    ```
 
 2. Initialize the plugin in your JavaScript:
@@ -53,8 +53,8 @@ Include the following files in your project:
 
 - id: Optional - ID of the alert popup container.
 - title: Optional
-- text:
-- subtext:
+- text: Main Text
+- subtext: Sub Text
 - type: Icon type {'info','question','success','warning','danger'}
 - isStatic: Boolean indicating if the popup is static (click outside to close),
 - hasConfirmation: Boolean indicating if the popup has yes button,
@@ -63,6 +63,7 @@ Include the following files in your project:
 - submitType: Nullable, type of submission {'form', 'call_function'}.
 - formId: Form ID to submit (if submitType == 'form'),
 - callFunctionName: Function Name to call (if submitType == 'call_function'),
+- timeOut: auto close modal (1000 = 1 sec),
 
 ## License
 
