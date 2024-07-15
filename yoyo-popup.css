@@ -1,10 +1,6 @@
 /*! * Yoyo Popup v1.0.0 (https://github.com/smallvi/yoyo_popup) * Copyright 2024 The Yoyo Popup Author * Licensed under MIT (https://github.com/smallvi/yoyo_popup/blob/main/LICENSE.md) */
 
-body {
-    font-family: Arial, sans-serif;
-}
-
-.alert-popup-modal {
+.yoyo-popup-modal {
     display: none;
     position: fixed;
     z-index: 1000;
@@ -18,12 +14,12 @@ body {
     transition: opacity 0.25s;
 }
 
-.alert-popup-modal.show {
+.yoyo-popup-modal.show {
     display: block;
     opacity: 1;
 }
 
-.alert-popup-content {
+.yoyo-popup-content {
     background-color: #fff;
     margin: 15% auto;
     padding: 20px;
@@ -31,43 +27,43 @@ body {
     width: 80%;
     max-width: 600px;
     border-radius: 5px;
-    animation: fadeIn 0.25s;
+    animation: yoyoFadeIn 0.25s;
 }
 
-.alert-popup-header {
+.yoyo-popup-header {
     padding: 10px;
     text-align: center;
 }
 
-.alert-popup-footer {
+.yoyo-popup-footer {
     padding: 10px;
     display: flex;
     justify-content: center;
 }
 
-.alert-popup-body {
+.yoyo-popup-body {
     padding: 20px 10px;
     text-align: center;
 }
 
-.alert-popup-text {
+.yoyo-popup-text {
     font-size: 1.5em;
     margin-bottom: 10px;
     color: #423b33;
 }
 
-.alert-popup-subtext {
+.yoyo-popup-subtext {
     font-size: 1.2em;
 }
 
-.alert-popup-icon {
+.yoyo-popup-icon {
     width: 7rem;
     height: 7rem;
     margin-bottom: 10px;
-    animation: iconBounce 1s ease;
+    animation: yoyoIconBounce 1s ease;
 }
 
-.btn {
+.yoyo-popup-btn {
     padding: 10px 20px;
     color: white;
     border: none;
@@ -75,16 +71,16 @@ body {
     cursor: pointer;
 }
 
-.btn-secondary {
+.yoyo-popup-btn-grey {
     background-color: #6c757d;
     margin-right: 10px;
 }
 
-.btn-primary {
+.yoyo-popup-btn-blue {
     background-color: #007bff;
 }
 
-@keyframes fadeIn {
+@keyframes yoyoFadeIn {
     from {
         opacity: 0;
     }
@@ -93,7 +89,7 @@ body {
     }
 }
 
-@keyframes fadeOut {
+@keyframes yoyoFadeOut {
     from {
         opacity: 1;
     }
@@ -102,7 +98,7 @@ body {
     }
 }
 
-@keyframes iconBounce {
+@keyframes yoyoIconBounce {
     0%, 20%, 50%, 80%, 100% {
         transform: translateY(0);
     }
@@ -114,7 +110,7 @@ body {
     }
 }
 
-@keyframes shake {
+@keyframes yoyoShake {
     0% { transform: translateX(0); }
     25% { transform: translateX(-5px); }
     50% { transform: translateX(5px); }
@@ -122,21 +118,21 @@ body {
     100% { transform: translateX(0); }
 }
 
-.fadeOutAnimation {
-    animation: fadeOut 0.25s;
+.yoyoFadeOutAnimation {
+    animation: yoyoFadeOut 0.25s;
 }
 
-.shakeAnimation {
-    animation: shake 0.5s;
+.yoyoShakeAnimation {
+    animation: yoyoShake 0.5s;
 }
 
-.progress-bar {
+.yoyo-popup-progress-bar {
     width: 100%;
     height: 1px;
     overflow: hidden;
 }
 
-.progress {
+.yoyo-popup-progress {
     height: 100%;
     width: 0;
     background-color: #007bff;

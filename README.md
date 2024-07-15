@@ -1,5 +1,9 @@
 # Yoyo Popup Plugin
 
+## Author
+- Yeo
+- smallvi@gmail.com
+
 ## Introduction
 
 This plugin provides a customizable alert popup without any dependencies.
