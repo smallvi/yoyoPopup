@@ -74,10 +74,20 @@
 .yoyo-popup-btn-grey {
     background-color: #6c757d;
     margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.yoyo-popup-btn-grey:hover {
+    background-color: #252729;
 }
 
 .yoyo-popup-btn-blue {
     background-color: #007bff;
+    transition: background-color 0.3s ease;
+}
+
+.yoyo-popup-btn-blue:hover {
+    background-color: #004c9e;
 }
 
 @keyframes yoyoFadeIn {
