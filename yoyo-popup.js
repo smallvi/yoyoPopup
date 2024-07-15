@@ -58,9 +58,10 @@ function showYoyoPopup(config) {
 
     function yoyoFadeOut() {
         if (yoyoAlertPopupModal.classList.contains("show")) {
+            void yoyoAlertPopupModal.offsetWidth;
             yoyoAlertPopupModal.classList.add("yoyoFadeOutAnimation");
             setTimeout(function () {
-                yoyoAlertPopupModal.classList.remove("show", "yoyoFadeOutAnimation");
+                yoyoAlertPopupModal.classList.remove("show");
                 yoyoAlertPopupModal.remove();
             }, 250);
         }
@@ -85,9 +86,15 @@ function showYoyoPopup(config) {
     if (isStatic) {
         window.onclick = function (event) {
             if (event.target == yoyoAlertPopupModal) {
-                yoyoAlertPopupModal.querySelector('.yoyo-popup-content').classList.remove('yoyoShakeAnimation');
+                const popupContent = yoyoAlertPopupModal.querySelector('.yoyo-popup-content');
+
+                popupContent.style.animation = 'none';
+                void popupContent.offsetWidth;
+                popupContent.style.animation = '';
+
                 setTimeout(() => {
-                    yoyoAlertPopupModal.querySelector('.yoyo-popup-content').classList.add('yoyoShakeAnimation');
+                    popupContent.classList.add('yoyoShakeAnimation');
+                    void popupContent.offsetWidth;
                 }, 0);
             }
         };
