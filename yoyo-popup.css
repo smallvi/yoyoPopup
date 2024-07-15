@@ -1,3 +1,5 @@
+/*! * Yoyo Popup v1.0.0 (https://github.com/smallvi/yoyo_popup) * Copyright 2024 The Yoyo Popup Author * Licensed under MIT (https://github.com/smallvi/yoyo_popup/blob/main/LICENSE.md) */
+
 body {
     font-family: Arial, sans-serif;
 }
@@ -126,4 +128,17 @@ body {
 
 .shakeAnimation {
     animation: shake 0.5s;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 1px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    width: 0;
+    background-color: #007bff;
+    transition: width 0.25s linear;
 }

@@ -1,3 +1,4 @@
+/*! * Yoyo Popup v1.0.0 (https://github.com/smallvi/yoyo_popup) * Copyright 2024 The Yoyo Popup Author * Licensed under MIT (https://github.com/smallvi/yoyo_popup/blob/main/LICENSE.md) */
 function showYoyoPopup(config) {
     const {
         id = 'default',
@@ -32,6 +33,7 @@ function showYoyoPopup(config) {
     const modalHTML = `
         <div id="alertPopupModal_${id}" class="alert-popup-modal">
             <div class="alert-popup-content">
+                ${timeOut != 0 ? `<div class="progress-bar"><div class="progress" id="progress_${id}"></div></div>` : ''}
                 <div class="alert-popup-header">
                     ${title ? `<h2>${title}</h2>` : ''}
                 </div>
@@ -77,10 +79,6 @@ function showYoyoPopup(config) {
         yesBtn.onclick = function () {
             window[callFunctionName]();
             fadeOut();
-            showYoyoPopup({
-                text: 'Done',
-                type: 'success',
-            });
         };
     }
 
@@ -103,8 +101,23 @@ function showYoyoPopup(config) {
 
     alertPopupModal.classList.add("show");
 
-    if(timeOut != 0){
+    if (timeOut != 0) {
+        const progressBar = document.getElementById(`progress_${id}`);
+        let width = 0;
+        const interval = 100;
+        const increment = 100 / (timeOut / interval);
+
+        const progressInterval = setInterval(() => {
+            if (width >= 100) {
+                clearInterval(progressInterval);
+            } else {
+                width += increment;
+                progressBar.style.width = `${width}%`;
+            }
+        }, interval);
+
         setTimeout(() => {
+            clearInterval(progressInterval);
             fadeOut();
         }, timeOut);
     }
