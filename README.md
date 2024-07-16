@@ -1,4 +1,4 @@
-# Yoyo Popup Plugin
+# Yoyo Popup
 
 ## Author
 - Yeo
@@ -17,7 +17,7 @@ Include the following files in your project:
 
 ## Usage
 
-1. Include `yoyo-popup.css` and `yoyo-popup.js` in your HTML file:
+1. Include `yoyo-popup.min.css` and `yoyo-popup.min.js` in your HTML file:
 
    ```html
    <link rel="stylesheet" href="path/to/yoyo-popup.min.css">
@@ -26,7 +26,7 @@ Include the following files in your project:
 
 2. Initialize the plugin in your JavaScript:
     
-    ### Simple Alert
+    ### Simple Yoyo Popup Alert
 
     ```javascript
     showYoyoPopup({
@@ -35,7 +35,9 @@ Include the following files in your project:
     });
     ```
     
-    ### Advance Alert
+    ![Simple Yoyo Popup Alert](images/Simple_Yoyo_Popup.png)
+
+    ### Advance Yoyo Popup Alert
 
     ```javascript
     showYoyoPopup({
@@ -54,6 +56,8 @@ Include the following files in your project:
         timeOut = 0,
     });
     ```
+
+    ![Advance Yoyo Popup Alert](images/Advance_Yoyo_Popup.png)
 
 ## Param
 
