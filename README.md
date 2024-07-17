@@ -13,7 +13,7 @@ This plugin provides a customizable alert popup without any dependencies.
 ![Success Yoyo Popup ](images/success_yoyo_popup.png)
 ![Danger Yoyo Popup ](images/danger_yoyo_popup.png)
 ![Info Yoyo Popup ](images/info_yoyo_popup.png)
-![Warning Yoyo Popup ](images/Warning_yoyo_popup.png)
+![Warning Yoyo Popup ](images/warning_yoyo_popup.png)
 ![Question Yoyo Popup ](images/question_yoyo_popup.png)
 
 ## Installation
