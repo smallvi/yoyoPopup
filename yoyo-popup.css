@@ -89,7 +89,6 @@
 
 .yoyo-popup-btn-grey {
     background-color: var(--yoyo-popup-btn-grey);
-    margin-right: 10px;
 }
 
 .yoyo-popup-btn-grey:hover {
@@ -98,6 +97,7 @@
 
 .yoyo-popup-btn-blue {
     background-color: var(--yoyo-popup-btn-blue);
+    margin-left: 50px;
 }
 
 .yoyo-popup-btn-blue:hover {
