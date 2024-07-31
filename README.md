@@ -81,8 +81,8 @@ Include the following files in your project:
 
 ## Sample
 
-Refer index.html
+[Demo](https://smallvi.github.io/yoyo_popup/)
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE.md file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

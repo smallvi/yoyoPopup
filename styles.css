@@ -1,0 +1,71 @@
+body {
+    background-color: #7e7e7e;
+    color: #1f1f1f;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    animation: pulse 2s infinite;
+}
+
+.github-link {
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.github-link:hover {
+    color: #007bff;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        text-shadow: 0 0 10px rgba(0, 255, 255, 0.5), 0 0 20px rgba(0, 255, 255, 0.5), 0 0 30px rgba(0, 255, 255, 0.5);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(0, 255, 255, 1), 0 0 30px rgba(0, 255, 255, 1), 0 0 40px rgba(0, 255, 255, 1);
+    }
+}
+
+.button {
+    padding: 20px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin: 50px 10px;
+
+}
+
+.button:hover {
+    transform: scale(1.1);
+}
+
+#successBtn {
+    background-color: lightgreen;
+}
+
+#dangerBtn {
+    background-color: #e74c3c;
+    color: white;
+}
+
+#infoBtn {
+    background-color: lightblue;
+}
+
+#warningBtn {
+    background-color: #f4d03f;
+}
