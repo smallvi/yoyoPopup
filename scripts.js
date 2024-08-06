@@ -13,11 +13,14 @@ document.getElementById('dangerBtn').onclick = function () {
         type: 'danger',
         isStatic: true,
         hasConfirmation: true,
-        yesLabel: 'Yes, proceed',
-        noLabel: 'Close',
-        submitType: 'call_function',
+        hasCancellation: true,
+        confirmLabel: 'Yes, proceed',
+        cancelLabel: 'Cancel',
+        closeLabel: 'Close',
         formId: '',
-        callFunctionName: 'exampleFunction',
+        confirmFunction: ()=> functionConfirm(),
+        cancelFunction: ()=> functionCancel(),
+        closeFunction: () => alert('You click Close'),
     });
 };
 
@@ -37,11 +40,9 @@ document.getElementById('warningBtn').onclick = function () {
         type: 'warning',
         isStatic: true,
         hasConfirmation: true,
-        yesLabel: 'Yes, proceed',
-        noLabel: 'Close',
-        submitType: 'call_function',
-        formId: '',
-        callFunctionName: 'exampleFunction',
+        confirmLabel: 'Yes, proceed',
+        closeLabel: 'Close',
+        confirmFunction: ()=> alert('You click Confirm!'),
     });
 };
 
@@ -54,14 +55,16 @@ document.getElementById('questionBtn').onclick = function () {
         type: 'question',
         isStatic: true,
         hasConfirmation: true,
-        yesLabel: 'Comfirm',
-        noLabel: 'Close',
-        submitType: 'call_function',
-        formId: '',
-        callFunctionName: 'exampleFunction',
+        confirmLabel: 'Comfirm',
+        closeLabel: 'Close',
+        confirmFunction: ()=> alert('You click Confirm!'),
     });
 };
 
-function exampleFunction() {
-    alert('Function Called!');
+function functionConfirm(){
+    alert('Function Confirm called');
+}
+
+function functionCancel(){
+    alert('Function Cancel called');
 }

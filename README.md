@@ -1,12 +1,8 @@
 # Yoyo Popup
 
-## Author
-- Yeo
-- smallvi@gmail.com
-
 ## Introduction
 
-This plugin provides a customizable alert popup without any dependencies.
+Yoyo Popup is a customizable alert popup plugin that works without any dependencies. It's designed to be easy to use and highly customizable, allowing you to create stylish and functional alert popups for your website or application.
 
 ## Screenshot
 
@@ -20,16 +16,14 @@ This plugin provides a customizable alert popup without any dependencies.
 
 Include the following files in your project:
 
-- `yoyo-popup.min.css`
 - `yoyo-popup.min.js`
 
 ## Usage
 
-1. Include `yoyo-popup.min.css` and `yoyo-popup.min.js` in your HTML file:
+1. Include `yoyo-popup.min.js` in your HTML file:
 
    ```html
-   <link rel="stylesheet" href="path/to/yoyo-popup.min.css">
-   <script src="path/to/yoyo-popup.min.js"></script>
+    <script src="path/to/yoyo-popup.min.js"></script>
    ```
 
 2. Initialize the plugin in your JavaScript:
@@ -47,36 +41,40 @@ Include the following files in your project:
 
     ```javascript
     showYoyoPopup({
-        id: 'default',
-        title: '',
         text: 'Are you sure you want to proceed?',
         subtext: 'This action cannot be undone.',
         type: 'danger',
         isStatic: true,
         hasConfirmation: true,
-        yesLabel: 'Yes, proceed',
-        noLabel: 'Close',
-        submitType: 'call_function',
-        formId = '',
-        callFunctionName: 'exampleFunction',
-        timeOut = 0,
+        hasCancellation: true,
+        confirmLabel: 'Yes, proceed',
+        cancelLabel: 'Cancel',
+        closeLabel: 'Close',
+        formId: '',
+        timeOut: 5000,
+        confirmFunction: ()=> functionConfirm(),
+        cancelFunction: ()=> functionCancel(),
+        closeFunction: () => alert('You click Close'),
     });
     ```
 
 ## Param
 
-- id: Optional - ID of the alert popup container.
-- title: Optional
 - text: Main Text
 - subtext: Sub Text
 - type: Icon type {'info','question','success','warning','danger'}
+
+- title: Optional
 - isStatic: Boolean indicating if the popup is static (click outside to close),
-- hasConfirmation: Boolean indicating if the popup has yes button,
-- yesLabel: Label of Yes button,
-- noLabel: Label of No button,
-- submitType: Nullable, type of submission {'form', 'call_function'}.
-- formId: Form ID to submit (if submitType == 'form'),
-- callFunctionName: Function Name to call (if submitType == 'call_function'),
+- hasConfirmation: Boolean indicating if the popup has confirm button,
+- hasCancellation: Boolean indicating if the popup has cancel button,
+- confirmLabel: Label of confirm button,
+- cancelLabel: Label of cancel button,
+- closeLabel: Label of close button,
+- formId: Form ID to submit,
+- confirmFunction: Function name to call if press confirm button,
+- cancelFunction: Function name to call if press cancel button,
+- closeFunction: Function name to call if press close button,
 - timeOut: auto close modal (1000 = 1 sec),
 
 ## Sample

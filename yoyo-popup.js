@@ -14,8 +14,10 @@ const cssStyles = `
     --yoyo-popup-text-color: #423b33;
     --yoyo-popup-btn-grey: #6c757d;
     --yoyo-popup-btn-grey-hover: #252729;
-    --yoyo-popup-btn-blue: #007bff;
+    --yoyo-popup-btn-blue: #3498db;
     --yoyo-popup-btn-blue-hover: #004c9e;
+    --yoyo-popup-btn-red: #e74c3c;
+    --yoyo-popup-btn-red-hover: #9c0000;
 }
 
 .yoyo-popup-modal {
@@ -114,6 +116,15 @@ const cssStyles = `
     background-color: var(--yoyo-popup-btn-blue-hover);
 }
 
+.yoyo-popup-btn-red {
+    background-color: var(--yoyo-popup-btn-red);
+    margin-left: 50px;
+}
+
+.yoyo-popup-btn-red:hover {
+    background-color: var(--yoyo-popup-btn-red-hover);
+}
+
 @keyframes yoyoFadeOut {
     from { opacity: 1; }
     to { opacity: 0; }
@@ -156,43 +167,45 @@ const cssStyles = `
 addGlobalStyle(cssStyles);
 
 const iconMap = {
-    'warning': '<svg class="yoyo-popup-icon" fill="orange" viewBox="0 0 20 20"><path d="M10 0C4.485 0 0 4.485 0 10s4.485 10 10 10 10-4.485 10-10S15.515 0 10 0zM11 15H9v-2h2v2zM11 11H9V5h2v6z"/></svg>',
-    'danger': '<svg class="yoyo-popup-icon" fill="red" viewBox="0 0 20 20"><path d="M10 0C4.485 0 0 4.485 0 10s4.485 10 10 10 10-4.485 10-10S15.515 0 10 0zM11 15H9v-2h2v2zM11 11H9V5h2v6z"/></svg>',
-    'success': '<svg class="yoyo-popup-icon" fill="green" viewBox="0 0 20 20"><path d="M10 0C4.485 0 0 4.485 0 10s4.485 10 10 10 10-4.485 10-10S15.515 0 10 0zM8 15l-5-5 1.5-1.5L8 12.5l7.5-7.5L17 6l-9 9z"/></svg>',
+    'warning': '<svg class="yoyo-popup-icon" fill="#f5b041" viewBox="0 0 20 20"><path d="M10 0C4.485 0 0 4.485 0 10s4.485 10 10 10 10-4.485 10-10S15.515 0 10 0zM11 15H9v-2h2v2zM11 11H9V5h2v6z"/></svg>',
+    'danger': '<svg class="yoyo-popup-icon" fill="#e74c3c" viewBox="0 0 20 20"><path d="M10 0C4.485 0 0 4.485 0 10s4.485 10 10 10 10-4.485 10-10S15.515 0 10 0zM11 15H9v-2h2v2zM11 11H9V5h2v6z"/></svg>',
+    'success': '<svg class="yoyo-popup-icon" fill="#27ae60" viewBox="0 0 20 20"><path d="M10 0C4.485 0 0 4.485 0 10s4.485 10 10 10 10-4.485 10-10S15.515 0 10 0zM8 15l-5-5 1.5-1.5L8 12.5l7.5-7.5L17 6l-9 9z"/></svg>',
     'question': '<svg class="yoyo-popup-icon" fill="grey" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM169.8 165.3c7.9-22.3 29.1-37.3 52.8-37.3h58.3c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24V250.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1H222.6c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/></svg>',
-    'info': '<svg class="yoyo-popup-icon" fill="blue" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>',
+    'info': '<svg class="yoyo-popup-icon" fill="#3498db" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>',
 };
 
 function showYoyoPopup(config) {
     const {
-        id = 'default',
         title = '',
         text = 'Are you sure?',
         subtext = null,
         type = 'warning',
         isStatic = false,
         hasConfirmation = false,
-        yesLabel = 'Yes',
-        noLabel = 'Close',
-        submitType = 'form',
+        hasCancellation = false,
+        confirmLabel = 'Confirm',
+        cancelLabel = 'Cancel',
+        closeLabel = 'Close',
         formId = '',
-        callFunctionName = 'empty_function',
+        confirmFunction = () => { },
+        cancelFunction = () => { },
+        closeFunction = () => { },
         timeOut = 0,
     } = config;
 
     const icon = iconMap[type] || iconMap['info'];
 
-    const existingModal = document.getElementById(`yoyoAlertPopupModal_${id}`);
+    const existingModal = document.getElementById(`yoyoAlertPopupModal`);
     if (existingModal) {
         existingModal.remove();
     }
 
     const modal = document.createElement('div');
-    modal.id = `yoyoAlertPopupModal_${id}`;
+    modal.id = `yoyoAlertPopupModal`;
     modal.className = 'yoyo-popup-modal';
     modal.innerHTML = `
         <div class="yoyo-popup-content">
-            ${timeOut != 0 ? `<div class="yoyo-popup-progress-bar"><div class="yoyo-popup-progress" id="yoyo_popup_progress_${id}"></div></div>` : ''}
+            ${timeOut != 0 ? `<div class="yoyo-popup-progress-bar"><div class="yoyo-popup-progress" id="yoyo_popup_progress"></div></div>` : ''}
             <div class="yoyo-popup-header">
                 ${title ? `<h2>${title}</h2>` : ''}
             </div>
@@ -202,8 +215,9 @@ function showYoyoPopup(config) {
                 ${subtext ? `<p class="yoyo-popup-subtext">${subtext}</p>` : ''}
             </div>
             <div class="yoyo-popup-footer">
-                <button class="yoyo-popup-btn yoyo-popup-btn-grey" data-action="close">${noLabel}</button>
-                ${hasConfirmation ? `<button class="yoyo-popup-btn yoyo-popup-btn-blue" data-action="confirm">${yesLabel}</button>` : ''}
+                <button class="yoyo-popup-btn yoyo-popup-btn-grey" data-action="close">${closeLabel}</button>
+                ${hasCancellation ? `<button class="yoyo-popup-btn yoyo-popup-btn-red" data-action="cancel">${cancelLabel}</button>` : ''}
+                ${hasConfirmation ? `<button class="yoyo-popup-btn yoyo-popup-btn-blue" data-action="confirm">${confirmLabel}</button>` : ''}
             </div>
         </div>
     `;
@@ -225,13 +239,20 @@ function showYoyoPopup(config) {
             void popupContent.offsetWidth;
             popupContent.classList.add('yoyoShakeAnimation');
         } else if (target.dataset.action === 'close') {
+            closeFunction();
             yoyoFadeOut();
-        } else if (target.dataset.action === 'confirm') {
-            if (submitType === 'form') {
+        }
+        else if (target.dataset.action === 'cancel') {
+            cancelFunction();
+            yoyoFadeOut();
+        }
+        else if (target.dataset.action === 'confirm') {
+            if (formId) {
                 document.getElementById(formId)?.submit();
-            } else if (submitType === 'call_function') {
-                window[callFunctionName]?.();
+            } else {
+                confirmFunction();
             }
+
             yoyoFadeOut();
         }
     });
@@ -244,7 +265,7 @@ function showYoyoPopup(config) {
     });
 
     if (timeOut !== 0) {
-        const yoyoProgressBar = document.getElementById(`yoyo_popup_progress_${id}`);
+        const yoyoProgressBar = document.getElementById(`yoyo_popup_progress`);
         let width = 0;
         const interval = 16; // around 60fps
         const increment = 100 / (timeOut / interval);
