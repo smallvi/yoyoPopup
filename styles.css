@@ -1,11 +1,10 @@
 body {
-    background-color: #7e7e7e;
+    background-color: #1e1e1e;
     color: #1f1f1f;
     font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     margin: 0;
 }
 
@@ -20,13 +19,19 @@ h1 {
     animation: pulse 2s infinite;
 }
 
-.github-link {
-    color: #fff;
-    transition: color 0.3s;
+.github-btn {
+    display: block;
+    font-size: 1.5rem;
+    border: 1px;
+    padding: 10px;
+    background-color: #373737;
+    margin: auto;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;;
 }
 
-.github-link:hover {
-    color: #007bff;
+.github-btn:hover {
+    background-color: #292929;
 }
 
 @keyframes pulse {
