@@ -156,8 +156,8 @@ h1 {
 }
 
 .floating-image {
-    width: 200px;
-    height: auto;
+    width: 300px;
+    /* height: auto; */
     animation: float 3s ease-in-out infinite;
 }
 
