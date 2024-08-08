@@ -1,5 +1,9 @@
 # Yoyo Popup
 
+![Yoyo Popup Banner](images/yoyo_popup_banner.png)
+
+[View Demo](https://smallvi.github.io/yoyo_popup/)
+
 ## Introduction
 
 Yoyo Popup is a customizable alert popup plugin that works without any dependencies. It's designed to be easy to use and highly customizable, allowing you to create stylish and functional alert popups for your website or application.
@@ -76,10 +80,6 @@ Include the following files in your project:
 - cancelFunction: Function name to call if press cancel button,
 - closeFunction: Function name to call if press close button,
 - timeOut: auto close modal (1000 = 1 sec),
-
-## Sample
-
-[Demo](https://smallvi.github.io/yoyo_popup/)
 
 ## License
 

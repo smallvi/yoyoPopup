@@ -10,8 +10,8 @@
 
 <body style="font-family: Arial, sans-serif;">
     <div class="container">
-        <h1>Yoyo Popup</h1>
-        <img src="./images/yoyo_popup.png" style="width:350px;">
+        <h1 style="margin-bottom: 50px;">Yoyo Popup</h1>
+        <img src="./images/yoyo_popup.png" style="width:200px;margin-bottom: 50px;">
         <button class="github-btn" style="margin-bottom: 50px;">
             <a href="https://github.com/smallvi/yoyo_popup" target="_blank" class="github-link"
                 style="text-decoration: none;">
@@ -24,7 +24,7 @@
             </a>
         </button>
 
-        <div style="margin-top: 1.5rem;">
+        <div>
             <button class="button" id="successBtn">Success, 5 sec</button>
             <button class="button" id="dangerBtn">Danger, Static</button>
             <button class="button" id="infoBtn">Info</button>
@@ -32,8 +32,99 @@
             <button class="button" id="questionBtn">Question</button>
         </div>
 
-        <div>
-            <img src="images/Simple-Yoyo-Popup.png" style="width:600px;">
+        <div style="margin-bottom: 60px; width: 350px;margin: 0 auto 60px auto;">
+            <div class="browser_container">
+                <div class="browser_top">
+                    <span class="browser_dot"></span>
+                    <span class="browser_dot"></span>
+                    <span class="browser_dot"></span>
+                    <div class="browser_top_center">Simple Yoyo Popup</div>
+                </div>
+
+                <div class="browser_content">
+                    <p><span class="browser_function_color">showYoyoPopup</span>({</p>
+                    <p class="browser_inline">text<span class="browser_symbol_color">:</span> <span
+                            class="browser_value_color">'Done'</span><span class="browser_symbol_color">,</span></p>
+                    <p class="browser_inline">type<span class="browser_symbol_color">:</span> <span
+                            class="browser_value_color">'success'</span><span class="browser_symbol_color">,</span></p>
+                    <p>});</p>
+                </div>
+
+            </div>
+        </div>
+        <div style="margin-bottom: 60px;">
+            <div class="browser_container" style="margin:auto;">
+                <div class="browser_top">
+                    <span class="browser_dot"></span>
+                    <span class="browser_dot"></span>
+                    <span class="browser_dot"></span>
+                    <div class="browser_top_center">Advance Yoyo Popup</div>
+                </div>
+
+                <div class="browser_content">
+                    <p><span class="browser_function_color">showYoyoPopup</span>({</p>
+
+                    <p class="browser_inline">text<span class="browser_symbol_color">:</span> <span
+                            class="browser_value_color">'Are you sure you want to proceed?'</span><span
+                            class="browser_symbol_color">,</span></p>
+
+                    <p class="browser_inline">subtext<span class="browser_symbol_color">:</span> <span
+                            class="browser_value_color">'This action cannot be undone.'</span><span
+                            class="browser_symbol_color">,</span></p>
+
+                    <p class="browser_inline">type<span class="browser_symbol_color">:</span> <span
+                            class="browser_value_color">'danger'</span><span class="browser_symbol_color">,</span></p>
+
+                    <p class="browser_inline">isStatic<span class="browser_symbol_color">:</span> <span
+                            class="browser_value_color">true</span><span class="browser_symbol_color">,</span></p>
+
+                    <p class="browser_inline">hasConfirmation<span class="browser_symbol_color">:</span> <span
+                            class="browser_value_color">true</span><span class="browser_symbol_color">,</span></p>
+
+                    <p class="browser_inline">hasCancellation<span class="browser_symbol_color">:</span> <span
+                            class="browser_value_color">true</span><span class="browser_symbol_color">,</span></p>
+
+                    <p class="browser_inline">confirmLabel<span class="browser_symbol_color">:</span> <span
+                            class="browser_value_color">'Yes, proceed'</span><span class="browser_symbol_color">,</span>
+                    </p>
+
+                    <p class="browser_inline">cancelLabel<span class="browser_symbol_color">:</span> <span
+                            class="browser_value_color">'Cancel'</span><span class="browser_symbol_color">,</span>
+                    </p>
+
+                    <p class="browser_inline">closeLabel<span class="browser_symbol_color">:</span> <span
+                            class="browser_value_color">'Close'</span><span class="browser_symbol_color">,</span>
+                    </p>
+
+                    <p class="browser_inline">closeLabel<span class="browser_symbol_color">:</span> <span
+                            class="browser_value_color">'Close'</span><span class="browser_symbol_color">,</span>
+                    </p>
+
+                    <p class="browser_inline">timeOut<span class="browser_symbol_color">:</span> <span
+                            class="browser_value_color">5000</span><span class="browser_symbol_color">,</span>
+                    </p>
+
+                    <p class="browser_inline"><span class="browser_function_color">confirmFunction</span><span
+                            class="browser_symbol_color">:</span> ()=>
+                        <span class="browser_function_color">functionConfirm</span>()<span
+                            class="browser_symbol_color">,</span>
+                    </p>
+
+                    <p class="browser_inline"><span class="browser_function_color">cancelFunction</span><span
+                            class="browser_symbol_color">:</span> ()=>
+                        <span class="browser_function_color">functionCancel</span>()<span
+                            class="browser_symbol_color">,</span>
+                    </p>
+
+                    <p class="browser_inline"><span class="browser_function_color">closeFunction</span><span
+                            class="browser_symbol_color">:</span> () => <span class="browser_function_color">alert</span>(<span class="browser_value_color">'You
+                            click Close'</span>)<span class="browser_symbol_color">,</span>
+                    </p>
+
+                    <p>});</p>
+                </div>
+
+            </div>
         </div>
     </div>
 
