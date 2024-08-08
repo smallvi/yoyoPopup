@@ -29,7 +29,7 @@ h1 {
     margin: auto;
     transition: background-color 0.3s ease;
     border-radius: 5px;
-    ;
+    cursor: pointer;
 }
 
 .github-btn:hover {
