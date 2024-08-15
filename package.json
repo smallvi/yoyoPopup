@@ -1,0 +1,28 @@
+{
+  "name": "yoyo-popup",
+  "version": "1.0.0",
+  "description": "Yoyo Popup is a customizable alert popup plugin that works without any dependencies. It's designed to be easy to use and highly customizable, allowing you to create stylish and functional alert popups for your website or application.",
+  "main": "./dist/yoyoPopup.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smallvi/yoyoPopup.git"
+  },
+  "keywords": [
+    "popup",
+    "alert",
+    "modal",
+    "dialog",
+    "prompt",
+    "confirmation",
+    "javascript"
+  ],
+  "author": "Smallvi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/smallvi/yoyoPopup/issues"
+  },
+  "homepage": "https://github.com/smallvi/yoyoPopup#readme"
+}
