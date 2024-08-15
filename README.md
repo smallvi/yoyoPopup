@@ -18,19 +18,19 @@ Yoyo Popup is a customizable alert popup plugin that works without any dependenc
 
 ## Installation
 
-Include the following files in your project:
+- #### Download
 
-- `yoyo-popup.min.js`
+```html
+<script src="path/to/yoyoPopup.min.js"></script>
+```
+
+- #### CDN
+
+```html
+<script src="https://cdn.jsdelivr.net/gh/smallvi/yoyoPopup/dist/yoyoPopup.min.js"></script>
+```
 
 ## Usage
-
-1. Include `yoyo-popup.min.js` in your HTML file:
-
-   ```html
-    <script src="path/to/yoyo-popup.min.js"></script>
-   ```
-
-2. Initialize the plugin in your JavaScript:
     
     ### Simple Yoyo Popup Alert
 

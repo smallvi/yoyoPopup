@@ -1,4 +1,4 @@
-/*! Yoyo Popup v1.0.2 (https://github.com/smallvi/yoyo_popup) */
+/*! Yoyo Popup v1.0.0 (https://github.com/smallvi/yoyoPopup) */
 
 function addGlobalStyle(css) {
     const style = document.createElement('style');
