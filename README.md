@@ -18,16 +18,22 @@ Yoyo Popup is a customizable alert popup plugin that works without any dependenc
 
 ## Installation
 
-- #### Download
+- #### CDN
+
+```html
+<script src="https://cdn.jsdelivr.net/gh/smallvi/yoyoPopup/dist/yoyoPopup.min.js"></script>
+```
+
+- #### Self Hosted
 
 ```html
 <script src="path/to/yoyoPopup.min.js"></script>
 ```
 
-- #### CDN
+- #### Using ES6 Module
 
-```html
-<script src="https://cdn.jsdelivr.net/gh/smallvi/yoyoPopup/dist/yoyoPopup.min.js"></script>
+```javascript
+import { showYoyoPopup } from 'yoyoPopup.mjs';
 ```
 
 ## Usage
