@@ -2,7 +2,7 @@
 
 ![Yoyo Popup Banner](images/yoyo_popup_banner.png)
 
-[View Demo](https://smallvi.github.io/yoyoPopup/)
+[View Demo](https://smallvi.github.io/projects/yoyoPopup/)
 
 ## Introduction
 
