@@ -48,35 +48,35 @@ import { showYoyoPopup } from 'yoyoPopup.mjs';
 
 ## Usage
     
-    ### Simple Yoyo Popup Alert
+### Simple Yoyo Popup Alert
 
-    ```javascript
-    showYoyoPopup({
-        text: 'Done',
-        type: 'success',
-    });
-    ```
+```javascript
+showYoyoPopup({
+    text: 'Done',
+    type: 'success',
+});
+```
 
-    ### Advance Yoyo Popup Alert
+### Advance Yoyo Popup Alert
 
-    ```javascript
-    showYoyoPopup({
-        text: 'Are you sure you want to proceed?',
-        subtext: 'This action cannot be undone.',
-        type: 'danger',
-        isStatic: true,
-        hasConfirmation: true,
-        hasCancellation: true,
-        confirmLabel: 'Yes, proceed',
-        cancelLabel: 'Cancel',
-        closeLabel: 'Close',
-        formId: '',
-        timeOut: 5000,
-        confirmFunction: ()=> functionConfirm(),
-        cancelFunction: ()=> functionCancel(),
-        closeFunction: () => alert('You click Close'),
-    });
-    ```
+```javascript
+showYoyoPopup({
+    text: 'Are you sure you want to proceed?',
+    subtext: 'This action cannot be undone.',
+    type: 'danger',
+    isStatic: true,
+    hasConfirmation: true,
+    hasCancellation: true,
+    confirmLabel: 'Yes, proceed',
+    cancelLabel: 'Cancel',
+    closeLabel: 'Close',
+    formId: '',
+    timeOut: 5000,
+    confirmFunction: ()=> functionConfirm(),
+    cancelFunction: ()=> functionCancel(),
+    closeFunction: () => alert('You click Close'),
+});
+```
 
 ## Param
 
