@@ -18,10 +18,14 @@ Yoyo Popup is a customizable alert popup plugin that works without any dependenc
 
 ## Installation
 
-- #### npm
+- #### Install Package
 
 ```bash
+# npm
 npm install yoyo-popup
+
+# yarn
+yarn add yoyo-popup
 ```
 
 ```javascript
@@ -31,7 +35,11 @@ import { showYoyoPopup } from './node_modules/yoyo-popup/dist/yoyoPopup.min.mjs'
 - #### CDN
 
 ```html
+<!-- jsDelivr CDN -->
 <script src="https://cdn.jsdelivr.net/gh/smallvi/yoyoPopup/dist/yoyoPopup.min.js"></script>
+
+<!-- unpkg CDN -->
+<script src="https://unpkg.com/yoyo-popup@latest/dist/yoyoPopup.umd.min.js"></script>
 ```
 
 - #### Self Hosted
