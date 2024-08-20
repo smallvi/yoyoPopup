@@ -36,7 +36,7 @@ import { showYoyoPopup } from './node_modules/yoyo-popup/dist/yoyoPopup.min.mjs'
 
 ```html
 <!-- jsDelivr CDN -->
-<script src="https://cdn.jsdelivr.net/gh/smallvi/yoyoPopup/dist/yoyoPopup.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/smallvi/yoyoPopup@latest/dist/yoyoPopup.umd.min.js"></script>
 
 <!-- unpkg CDN -->
 <script src="https://unpkg.com/yoyo-popup@latest/dist/yoyoPopup.umd.min.js"></script>
@@ -45,13 +45,13 @@ import { showYoyoPopup } from './node_modules/yoyo-popup/dist/yoyoPopup.min.mjs'
 - #### Self Hosted
 
 ```html
-<script src="path/to/yoyoPopup.min.js"></script>
+<script src="path/to/yoyoPopup.umd.min.js"></script>
 ```
 
 - #### Self Hosted (ES6 Module)
 
 ```javascript
-import { showYoyoPopup } from 'yoyoPopup.mjs';
+import { showYoyoPopup } from 'path/to/yoyoPopup.mjs';
 ```
 
 ## Usage
